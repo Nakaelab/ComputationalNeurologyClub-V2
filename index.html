@@ -14,6 +14,7 @@
         /* --- Style Variables --- */
         :root {
             --ucl-dark-blue: #003d4c;
+            --ucl-deep-teal: #004d61; /* 新しいカード背景色 */
             --ucl-light-blue: #00a3e0;
             --text-main: #212121;
             --text-muted: #555555;
@@ -85,17 +86,16 @@
             letter-spacing: 0.05em;
         }
 
-        /* --- Hero Section (Left Aligned with Buttons) --- */
+        /* --- Hero Section --- */
         .hero {
             position: relative;
             background-image: url('image/brain.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 70vh; /* 少し高さを調整 */
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            /* text-align: center; を削除して左揃えに */
             padding: 100px 20px;
             color: #fff;
             background-color: #001e28;
@@ -112,9 +112,9 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: var(--max-width); /* コンテナ幅に合わせる */
+            max-width: var(--max-width);
             margin: 0 auto;
-            width: 100%; /* 幅を100%にして左揃えを有効にする */
+            width: 100%;
         }
 
         .hero-label {
@@ -136,7 +136,6 @@
             color: #fff;
             line-height: 1.1;
             text-shadow: 0 5px 15px rgba(0,0,0,0.8);
-            /* 左揃えのためにmax-widthを調整 */
             max-width: 800px;
         }
 
@@ -155,10 +154,9 @@
             opacity: 0.9;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
             max-width: 700px;
-            margin-bottom: 40px; /* ボタンとの間隔 */
+            margin-bottom: 40px;
         }
 
-        /* Hero Buttons */
         .hero-btn-group {
             display: flex;
             gap: 20px;
@@ -177,10 +175,7 @@
             font-family: var(--font-jp);
             border: 2px solid var(--ucl-light-blue);
         }
-        .btn-hero-primary:hover {
-            background-color: transparent;
-            color: #fff;
-        }
+        .btn-hero-primary:hover { background-color: transparent; color: #fff; }
 
         .btn-hero-secondary {
             display: inline-flex;
@@ -194,17 +189,12 @@
             font-family: var(--font-en);
             border: 2px solid #fff;
         }
-        .btn-hero-secondary:hover {
-            background-color: #fff;
-            color: var(--ucl-dark-blue);
-        }
+        .btn-hero-secondary:hover { background-color: #fff; color: var(--ucl-dark-blue); }
 
-
-        /* --- Upcoming Section --- */
+        /* --- Upcoming Section (New Design) --- */
         .upcoming-highlight {
-            background-color: var(--bg-light-gray);
+            background-color: var(--bg-white); /* 背景は白または薄いグレー */
             padding: 80px 20px;
-            border-bottom: 1px solid var(--border-color);
         }
 
         .container {
@@ -212,101 +202,10 @@
             margin: 0 auto;
         }
 
-        /* Feature Card Style */
-        .seminar-featured {
-            background-color: #fff;
-            border-left: 6px solid var(--ucl-light-blue);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            padding: 40px;
-            border-radius: 4px;
-            position: relative;
-        }
-
-        .featured-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .featured-tag {
-            background-color: var(--ucl-dark-blue);
-            color: #fff;
-            padding: 6px 16px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border-radius: 100px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .featured-title {
-            font-size: 1.8rem;
-            color: var(--ucl-dark-blue);
-            font-family: var(--font-jp);
-            line-height: 1.4;
-            margin-bottom: 15px;
-            width: 100%;
-        }
-
-        .featured-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 4px;
-        }
-
-        .info-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .info-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .info-value {
-            font-weight: 600;
-            color: var(--ucl-dark-blue);
-            font-family: var(--font-en);
-        }
-
-        .featured-desc {
-            margin-bottom: 30px;
-            font-size: 1.05rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 40px;
-            background-color: var(--ucl-light-blue);
-            color: #fff;
-            font-weight: 700;
-            border-radius: 4px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 163, 224, 0.3);
-            width: fit-content;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 163, 224, 0.4);
-            color: #fff;
-        }
-
-        /* --- Standard Section Styles --- */
-        .section { padding: 90px 20px; }
+        /* セクションタイトルと下線 */
         .section-header {
-            margin-bottom: 50px;
-            /* text-align: center; を削除して左揃えに */
+            margin-bottom: 40px;
+            text-align: left; /* 左揃え */
         }
         
         .section-title {
@@ -314,18 +213,110 @@
             display: inline-block;
             position: relative;
             padding-bottom: 15px;
+            color: var(--ucl-dark-blue);
         }
+        
+        /* 下線を左に配置 */
         .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0; /* 左揃えに変更 */
-            /* transform: translateX(-50%); を削除 */
-            width: 60px; height: 4px;
+            left: 0; /* 左端 */
+            width: 60px; height: 5px;
             background-color: var(--ucl-light-blue);
         }
 
-        /* --- About Grid --- */
+        /* ダークカードスタイル */
+        .seminar-featured {
+            background-color: var(--ucl-deep-teal); /* 濃い青緑背景 */
+            color: #fff;
+            padding: 50px;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0, 61, 76, 0.15);
+        }
+
+        .featured-label {
+            color: var(--ucl-light-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .featured-title {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            font-family: var(--font-jp);
+            line-height: 1.4;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        /* メタ情報（日付・時間・場所）の横並び配置 */
+        .featured-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 25px;
+            font-family: var(--font-en);
+            font-size: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .meta-item i { color: rgba(255,255,255,0.8); }
+
+        /* 講演者情報 */
+        .featured-speaker {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #fff;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15); /* 薄い区切り線 */
+        }
+        .featured-speaker i { font-size: 1.2em; opacity: 0.8; }
+
+        .featured-desc {
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 900px;
+        }
+
+        /* 白いボタン */
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 40px;
+            background-color: #fff;
+            color: var(--ucl-deep-teal);
+            font-weight: 800;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-family: var(--font-jp);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+            background-color: var(--ucl-light-blue);
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- Standard Section Styles --- */
+        .section { padding: 90px 20px; }
+        
         .about-text {
             max-width: 800px;
             /* margin: 0 auto; text-align: center; を削除して左揃えに */
@@ -386,13 +377,16 @@
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .hero { min-height: 60vh; align-items: flex-end; padding-bottom: 80px; } /* モバイルでの調整 */
+            .hero { min-height: 60vh; align-items: flex-end; padding-bottom: 80px; }
             .hero-title { font-size: 2.8rem; }
-            .featured-info-grid { grid-template-columns: 1fr; }
-            .archive-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-            nav { display: none; }
-            .hero-btn-group { flex-direction: column; width: 100%; } /* モバイルでボタンを縦積みに */
+            .hero-btn-group { flex-direction: column; width: 100%; }
             .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
+            
+            nav { display: none; }
+            
+            .seminar-featured { padding: 30px 20px; }
+            .featured-meta-row { flex-direction: column; gap: 15px; }
+            .btn-white { width: 100%; }
         }
     </style>
 </head>
@@ -440,36 +434,35 @@
                 </div>
 
                 <div class="seminar-featured">
-                    <div class="featured-header">
-                        <span class="featured-tag">Next Event / 13th Seminar</span>
+                    <span class="featured-label">Next Event / 13th Seminar</span>
+                    
+                    <h3 class="featured-title">
+                        パーキンソン病における脳萎縮パターンに基づく<br>
+                        異なるサブタイプの同定
+                    </h3>
+                    
+                    <div class="featured-meta-row">
+                        <div class="meta-item">
+                            <i class="far fa-calendar-alt"></i> 2025.01.17 (Fri)
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i> 14:30 - 16:00 JST
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-video"></i> Online (Zoom)
+                        </div>
                     </div>
-                    
-                    <h3 class="featured-title">パーキンソン病における脳萎縮パターンに基づく異なるサブタイプの同定</h3>
-                    
-                    <div class="featured-info-grid">
-                        <div class="info-item">
-                            <span class="info-label"><i class="far fa-calendar-alt"></i> Date</span>
-                            <span class="info-value">2025.01.17 (Fri)</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label"><i class="far fa-clock"></i> Time</span>
-                            <span class="info-value">14:30 - 16:00 JST</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label"><i class="fas fa-video"></i> Venue</span>
-                            <span class="info-value">Online (Zoom)</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label"><i class="fas fa-user-circle"></i> Speaker</span>
-                            <span class="info-value" style="font-family: var(--font-jp);">坂戸 勇介 先生 / 澤本 伸克 先生</span>
-                        </div>
+
+                    <div class="featured-speaker">
+                        <i class="fas fa-user-circle"></i>
+                        <span>講演者: 坂戸 勇介 先生 (京都大学/大津赤十字病院) / 澤本 伸克 先生 (京都大学)</span>
                     </div>
 
                     <p class="featured-desc">
                         疾患進行モデルとクラスタリング手法を統合した機械学習アルゴリズム”SuStaIn”を用い、パーキンソン病の脳萎縮パターンに基づくサブタイプ同定とその臨床的特徴についてご講演いただきます。
                     </p>
 
-                    <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn">
+                    <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn-white">
                         <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> 参加登録はこちら
                     </a>
                 </div>
