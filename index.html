@@ -90,24 +90,28 @@
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            /* 【変更】ご提示いただいた画像に近い「青く発光するニューロン/脳ネットワーク」の画像に変更 */
-            background-image: url('https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            /* 【変更】imageフォルダ内のbrain.jpgを指定 */
+            background-image: url('image/brain.jpg');
             background-size: cover;
             background-position: center;
-            padding: 140px 20px 120px;
+            background-repeat: no-repeat;
+            padding: 160px 20px 140px;
             color: #fff;
+            background-color: #001e28; /* フォールバック色 */
         }
         
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            /* 脳の光が綺麗に見えるように、少し暗めのグラデーションを調整 */
-            background: linear-gradient(135deg, rgba(0, 30, 40, 0.8), rgba(0, 61, 76, 0.6));
+            /* 画像自体が暗めなので、オーバーレイは少し控えめに調整 */
+            background: linear-gradient(135deg, rgba(0, 20, 40, 0.6), rgba(0, 61, 76, 0.4));
+            z-index: 1;
         }
 
         .hero-content {
             position: relative;
+            z-index: 2;
             max-width: var(--max-width);
             margin: 0 auto;
         }
@@ -125,9 +129,10 @@
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
             margin-bottom: 25px;
             color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .hero-text {
@@ -137,6 +142,7 @@
             font-weight: 500;
             line-height: 1.8;
             opacity: 0.95;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
         }
 
         /* --- Buttons --- */
@@ -297,7 +303,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 50px; /* ボタン用のスペース確保 */
+            margin-bottom: 50px;
         }
 
         .seminar-card {
@@ -408,7 +414,7 @@
                 </p>
                 
                 <div class="btn-group">
-                    <a href="INSERT_GOOGLE_FORM_URL_HERE" target="_blank" class="btn">
+                    <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn">
                         <i class="fas fa-edit"></i> 参加登録はこちら / Register
                     </a>
                     
@@ -479,7 +485,7 @@
                         疾患進行モデルとクラスタリング手法を統合した機械学習アルゴリズム”SuStaIn”を用い、パーキンソン病の脳萎縮パターンに基づくサブタイプ同定とその臨床的特徴についてご講演いただきます。
                     </p>
                     <div style="margin-top:20px;">
-                        <a href="INSERT_GOOGLE_FORM_URL_HERE" target="_blank" class="btn" style="border-color: #fff; background-color: #fff; color: var(--ucl-dark-blue);">
+                        <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn" style="border-color: #fff; background-color: #fff; color: var(--ucl-dark-blue);">
                             <i class="fas fa-paper-plane"></i> 参加登録はこちら
                         </a>
                     </div>
@@ -521,7 +527,6 @@
                     <a href="https://boatneck-weeder-7b7.notion.site/Computational-Neurology-Club-a945537f7cb54db3b20fa9c4e65c1e72" target="_blank" class="btn-outline">
                         View Full Archive <i class="fas fa-arrow-right" style="margin-left:10px;"></i>
                     </a>
-                    <p style="margin-top:15px; font-size:0.9rem; color:var(--text-muted);">Notionページで過去の全セミナー詳細をご覧いただけます</p>
                 </div>
             </div>
         </section>
